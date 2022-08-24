@@ -12,7 +12,7 @@ using Security.Api.DAL;
 namespace Security.Api.Migrations
 {
     [DbContext(typeof(SecurityContext))]
-    [Migration("20220818090407_Initial")]
+    [Migration("20220820075814_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

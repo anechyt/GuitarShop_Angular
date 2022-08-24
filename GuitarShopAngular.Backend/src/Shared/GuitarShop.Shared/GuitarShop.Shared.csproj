@@ -6,8 +6,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\Shared\GuitarShop.Shared\GuitarShop.Shared.csproj" />
-  </ItemGroup>
-
 </Project>
