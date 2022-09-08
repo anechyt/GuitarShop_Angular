@@ -9,7 +9,7 @@ namespace GuitarShop.Domain.Entities
             Guitars = new HashSet<Guitar>();
         }
         public int Id { get; set; }
-        public Name Name { get; set; } = null!;
+        public Name Name { get; set; }
 
         public ICollection<Guitar> Guitars { get; set; }
     }

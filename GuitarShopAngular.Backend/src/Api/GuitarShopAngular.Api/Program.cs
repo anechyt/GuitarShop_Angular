@@ -1,6 +1,13 @@
+using GuitarShop.Application.Categories.Queries.GetAllCategory;
+using GuitarShop.Infrastructure.Mapper;
 using GuitarShop.Persistence.Extensions;
+using MediatR;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddMediatR(typeof(GetCategories).GetTypeInfo().Assembly);
+builder.Services.AddAutoMapper(typeof(GuitarShopMappingProfile));
 
 builder.Services.AddControllers();
 

@@ -5,7 +5,7 @@ namespace GuitarShop.Persistence
 {
     public class GuitarShopContext : DbContext
     {
-        public DbSet<Category> Category { get; set; }
+        public DbSet<Category> Categories { get; set; }
         public DbSet<Guitar> Guitar { get; set; }
 
         public GuitarShopContext(DbContextOptions<GuitarShopContext> options) : base(options) { }
@@ -14,7 +14,7 @@ namespace GuitarShop.Persistence
         {
             modelBuilder.Entity<Guitar>(entity =>
             {
-                entity.HasOne(d => d.Category)
+                entity.HasOne(d => d.Categories)
                 .WithMany(p => p.Guitars)
                 .HasForeignKey(d => d.CategoryId)
                 .HasConstraintName("FK_Guitars_CategoryId");

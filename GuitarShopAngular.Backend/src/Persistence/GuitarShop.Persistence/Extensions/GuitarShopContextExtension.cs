@@ -34,7 +34,7 @@ namespace GuitarShop.Persistence.Extensions
 
         public static async Task TrySeedDatabase(this GuitarShopContext _context)
         {
-            if (!_context.Category.Any())
+            if (!_context.Categories.Any())
             {
                 var categories = new List<Category>()
                 {
@@ -44,7 +44,7 @@ namespace GuitarShop.Persistence.Extensions
                     }
                 };
 
-                await _context.Category.AddRangeAsync(categories);
+                await _context.Categories.AddRangeAsync(categories);
                 await _context.SaveChangesAsync();
             }
 

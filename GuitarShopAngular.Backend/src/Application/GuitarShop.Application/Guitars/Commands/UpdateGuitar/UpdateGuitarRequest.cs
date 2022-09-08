@@ -1,0 +1,17 @@
+﻿using GuitarShop.Application.Guitars.Dto;
+using MediatR;
+
+namespace GuitarShop.Application.Guitars.Commands.UpdateGuitar
+{
+    public class UpdateGuitarRequest : IRequest<GuitarDto>
+    {
+        public int Id { get; set; }
+        public string Name { get; set; } = null!;
+        public double Size { get; set; }
+        public int NumberOfStrings { get; set; }
+        public string Colour { get; set; } = null!;
+        public decimal Price { get; set; }
+        public string PhotoUrl { get; set; } = null!;
+        public int CategoryId { get; set; }
+    }
+}
